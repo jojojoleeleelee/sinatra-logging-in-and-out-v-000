@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :views, Proc.new { File.join(root, "../views/") }
     enable :sessions unless test?
     set :session_secret, "secret"
-    helpers ApplicationHelpers
+    helpers Helpers
   end
 
   get '/' do
@@ -30,7 +30,6 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/logout' do
-    @user.clear
     redirect '/'
   end
 
