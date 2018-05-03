@@ -7,7 +7,7 @@
   </head>
   <body id="page-top">
     <h2><%=current_user(session).username%></h2>
-    <p><%=current_user.balance%></p>
+    <p><%=current_user(session).balance%></p>
     <form action="/logout" method="get">
       <input type="submit" value="Log Out">
     </form>
