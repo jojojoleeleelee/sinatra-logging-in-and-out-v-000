@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <h2><%=@user.username%></h2>
-    <p><%=@user.balance%></p>
+    <h2><%=current_user.username%></h2>
+    <p><%=current_user.balance%></p>
     <form action="/logout" method="get">
       <input type="submit" value="Log Out">
     </form>
