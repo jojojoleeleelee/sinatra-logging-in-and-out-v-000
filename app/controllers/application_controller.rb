@@ -1,11 +1,12 @@
 require_relative '../../config/environment'
-
+require_relative '../helpers/helpers.rb'
 
 class ApplicationController < Sinatra::Base
   configure do
     set :views, Proc.new { File.join(root, "../views/") }
     enable :sessions unless test?
     set :session_secret, "secret"
+    helpers ApplicationHelpers
   end
 
   get '/' do
