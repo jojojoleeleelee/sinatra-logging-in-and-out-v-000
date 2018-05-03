@@ -5,6 +5,6 @@ class Helpers
   end
 
   def is_logged_in?(sessions)
-    if
+    # if
   end
 end
