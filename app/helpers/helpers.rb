@@ -9,3 +9,4 @@ module Helpers
       !!current_user(session)
     end
   end
+end
